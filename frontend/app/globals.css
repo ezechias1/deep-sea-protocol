@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+
+:root {
+  --background: #02040a;
+  /* Darker, slicker background */
+  --foreground: #e2e8f0;
+
+  /* Modern Deep Sea Palette */
+  --color-deep-bg: #02040a;
+  --color-deep-blue: #0f172a;
+  --color-deep-teal: #14b8a6;
+  /* Teal-500 */
+  --color-deep-light: #94a3b8;
+  /* Slate-400 */
+  --color-deep-accent: #38bdf8;
+  /* Sky-400 */
+  --color-deep-alert: #f59e0b;
+  /* Amber-500 */
+
+  /* Refined Glassmorphism */
+  --glass-bg: rgba(15, 23, 42, 0.4);
+  /* Slate-900 with opacity */
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-blur: 16px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-deep-bg: var(--color-deep-bg);
+  --color-deep-blue: var(--color-deep-blue);
+  --color-deep-teal: var(--color-deep-teal);
+  --color-deep-light: var(--color-deep-light);
+  --color-deep-accent: var(--color-deep-accent);
+  --color-deep-alert: var(--color-deep-alert);
+}
+
+body {
+  background: var(--background);
+  background-image:
+    radial-gradient(circle at 50% 0%, #1e293b 0%, transparent 40%),
+    radial-gradient(circle at 80% 10%, rgba(20, 184, 166, 0.1) 0%, transparent 20%);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Modern Glass Panel */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.2),
+    0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.glass-panel:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.05),
+    0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.glass-input {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid var(--glass-border);
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+.glass-input:focus {
+  outline: none;
+  border-color: var(--color-deep-teal);
+  box-shadow: 0 0 0 1px var(--color-deep-teal), 0 0 0 4px rgba(20, 184, 166, 0.1);
+}
+
+/* Manual Typography for Markdown */
+.prose {
+  color: var(--deep-light);
+  line-height: 1.6;
+}
+
+.prose h1,
+.prose h2,
+.prose h3 {
+  color: var(--color-deep-accent);
+  font-weight: 700;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.prose p {
+  margin-bottom: 1em;
+}
+
+.prose ul {
+  list-style-type: disc;
+  padding-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.prose strong {
+  color: #fff;
+}
