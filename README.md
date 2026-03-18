@@ -1,6 +1,8 @@
-# Deep Sea Protocol // Lead Research Agent 🌊
+# Deep Sea Protocol // Lead Research Agent
 
 **Deep Sea Protocol** is a high-end, AI-powered SaaS tool designed for automated lead research and ad strategy generation. It uses a swarm of autonomous agents to analyze businesses and generate actionable marketing insights in seconds.
+
+> Requires API keys (Gemini, Firecrawl, Proxycurl) to run. See setup instructions below.
 
 ## 🚀 What This Site Does
 
